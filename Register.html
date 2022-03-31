@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200&family=Poppins&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <meta charset = "utf-8" />
+          
+    <title>
+        Registration 
+    </title>
+      
+    <!-- add icon link -->
+    <link rel = "icon" href = https://tse1.mm.bing.net/th?id=OIP.EFHLSBWnwHKJdDxCI913vAAAAA&pid=Api&rs=1&c=1&qlt=95&w=114&h=114"
+    type = "image/x-icon">
+    <script
+      src="https://kit.fontawesome.com/24c494a6b6.js"
+      crossorigin="anonymous"></script>
+    <style>
+      body{
+        background-color: #fafbfe;
+        font-family: 'Poppins', sans-serif;
+        height: 1235px;
+      }
+      #BigBag{
+        display: flex;
+        /* justify-content: space-around; */
+      }
+
+      #leftBox{
+        width: 25%;
+        float: left;
+        /* border: 1px solid black; */
+        margin: auto;
+        height: max-content;
+        margin-top: 150px;
+        position: sticky;
+        top: 200px;     
+        margin-left: 40px;
+      }
+
+      
+      img{
+        text-align: center;
+        margin-bottom: -55px;
+        padding-left: 32%;
+        padding: 30px 5px 10px 5px;
+        margin-left: 170px;
+      }
+
+      h5{
+        padding: 55px 15px 5px 15px;
+        margin-bottom: 8px;
+      }
+
+      #leftRegister{
+        border: 0.1px solid #6b7994;
+        border-radius: 20px;
+        background-color: white;
+        border-style:dashed;
+        width: 270px;
+        margin-left: 100px;
+      }
+      
+      li{
+        display: flex;
+        width: 90%;
+        font-size: 14px;
+        color:#6b7994 ;
+      }
+      i{
+        color:#18c1a3 ;
+        padding-right: 8px;
+        font-size: 17px;
+      }
+
+      #rightBox{
+        width: 70%;
+        margin-right:150px;
+        margin-top: 15px;
+        margin-left: 35px;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; 
+        font-family: 'Roboto Slab', serif;
+        padding: 35px 35px 25px 50px;
+        /* border: 1px solid red; */
+        height: 1000px;
+        border-radius: 20px;
+        display: flex;
+      }
+      #googleRight{
+        border: 1px solid green;
+        width: 300px;
+        
+      }
+
+      #minime{
+        border-left: 0.1px solid #6b7994 ;
+        height: 150px;
+        margin-top: 150px;
+        width: 150px;
+        margin-left: 50px;
+      }
+
+      .dot {
+        height: 35px;
+        width: 35px;
+        background-color: #fafbfe ;
+        border-radius: 50%;
+        border: 1px solid gray;
+        display: inline-block;
+        margin-left: -15px;
+        margin-top: 38%;
+        text-align: center;
+        padding-top: 3px;
+      }
+
+      #minime{
+        display: flex;
+      }
+
+      .socialbtn google
+
+      #find{
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+
+      #LoginLeftForm{
+        width: 650px;
+        /* border: 1px solid black; */
+        margin-left: 1px;
+      }
+
+      #exampleInputEmail1{
+      font-size: 14px;
+      /* line-height: 22px; */
+      /* padding: 9px 16px 11px; */
+      border-radius: 4px;
+      }
+
+      .form-label{
+        margin-top: 12px;
+        /* color: aquamarine; */
+        font-size: 12px;
+      }
+      #workStatus ,#work{
+        display: flex;
+        margin-top: 15px;
+        justify-content: space-around;
+        /* border: 1px solid blueviolet; */
+      }
+      #work{
+        border: 0.11px solid #6b7994 ;
+        width: 48%;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 5px;
+      }
+      .textWrap{
+        color:#6b7994  ;
+        /* margin-top: -25px; */
+        /* border: 1px solid red; */
+        padding: 0px 15px 15px 15px;
+        height:100px;
+      }
+      .textWrap>p{
+        font-size: 12px;
+        margin-top: 5px;
+      }
+
+      .textWrap>h5{
+        color: #4b87ff;
+        padding-top: 5px;
+      }
+
+      #iconbag{
+        font-size: 30px;
+        margin-top: 30px ;
+        padding-left: 15px;
+        padding-right: 20px;
+        color: #4b87ff;
+      }
+
+      .resumefont{
+        font-size: 13px;
+        color:#6b7994  ;
+      }
+
+      #button-addon1{
+      border-radius: 25px;
+      background-color: #ff7555;
+      color: white;
+      border: none;
+      height: 30px;
+      padding-bottom: 30px;
+     
+     
+      }
+
+      #resumebox{
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        width: 300px;
+        border: 0.1px solid #6b7994;
+        height: 30px;
+        font-size: 12px;
+      }
+
+      .resumefont {
+        margin-top: 10px;
+        color: black;
+      }
+
+      .chk-label,.whatsappText{
+        font-size: 12px;
+        color: #6b7994;
+      }
+      .terms{
+        font-size: 12px;
+        color: #6b7994;
+        margin-top: 50px;
+      }
+      #register{
+        background-color: #4b87ff;
+        color: white;
+        border-radius: 15px;
+        border: none;
+        font-size: 20px;
+        padding: 10px 50px 10px 15px;
+      }
+
+      #pagedown{
+        display: flex;
+        margin-top: 130px;
+       width: 50%;
+       margin-left: 600px;
+       /* border: 1px solid red; */
+       
+      }
+      #downDiv >p{
+        /* border: 1px solid; */
+        width:fit-content;
+        margin-left: 700px;
+        height: fit-content;
+        font-size: 10px;
+        text-align: center;
+        color: #6b7994;
+      }
+
+      li{
+        font-size: 12px;
+        text-decoration: none;
+        border-right: 1px solid #939dbf;
+        /* border-left: 1px solid #6b7994; */
+        width: auto;
+        padding-left: 5px;
+        padding-right: 20px;
+      }
+      a{
+        text-decoration: none;
+
+      }
+      
+      
+
+
+     
+
+
+
+      
+    </style>
+  </head>
+  <body>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+    
+       <div id="BigBag">
+
+        <!-- LEFT***************** -->
+        <div id="leftBox">
+          <img src="https://static.naukimg.com/s/7/104/assets/images/green-boy.c8b59289.svg">
+            <div id="leftRegister">
+              
+              <h5>On registering, you can </h5>
+              <ul id="leftlist">
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>
+                  <p>Build your profile and let recruiters find you</p>
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>
+                  <p>Get job postings delivered right to your email</p>
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>
+                  <p>Find a job and grow your career</p>
+                </li>
+              </ul>
+            
+            
+            </div>
+        </div>
+        
+
+        <!-- RIGHT***************** -->
+        <div id="rightBox">
+          <form id="LoginLeftForm">
+
+      <h2 id="find">Find a job & grow your career</h2>
+
+      <div class="mb-3">
+         <label for="exampleInputEmail1" class="form-label">Full Name</label>
+         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="What is your name?">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email Id</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tell us your Email ID">
+        <div id="emailHelp" class="form-text">We'll send you relevant jobs in your mail</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Password</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Creat a password for your account">
+        <div id="emailHelp" class="form-text">Minimum 6 characters required</div>
+
+              <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Mobile Number</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Mobile Number">
+        <div id="emailHelp" class="form-text">Recruiters will call you on this number</div>
+      </div>
+
+      </div>
+
+      <!-- WORK STATUS******************************* -->
+      <div id="workStatus">
+        <div id="work">
+          <div class="iconWrap">
+          <i class="fa-solid fa-briefcase" id="iconbag"></i>
+        </div>
+        <div class="textWrap">
+          <h5 id="TextNextToBag">I'm Experienced</h5>
+          <p >  I have work experience (excluding internships)</p>
+        </div>
+        </div>
+
+        <div id="work">
+          <div class="iconWrap">
+            <i class="fa-solid fa-graduation-cap" id="iconbag"></i>
+        </div>
+        <div class="textWrap">
+          <h5 id="TextNextToBag">I'm a Fresher</h5>
+          <p > I am a student/ Haven't worked after graduation </p>
+        </div>
+        </div>
+      </div>
+
+      <!-- RESUME************************************ -->
+
+      <p class="resumefont">Resume</p>
+      <div class="input-group mb-3">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon1">Upload Resume</button>
+        <input type="text" id="resumebox" placeholder="DOC,DOCx,PDF,RTF | Max:2MB">
+      </div>
+      <p class="resumefont">Recruiters give first preference to candidates who have a resume</p>
+      <i class="fa-solid fa-calendar-check" id="checkout"></i>
+      <span class="chk-label">Send me important updates on<i class="fa-brands fa-whatsapp" id="whattsap"></i>
+        <span class="whatsappText">WhatsApp</span></span>
+
+      <p class="terms">By clicking Register, you agree to the Terms and Conditions & Privacy Policy of Naukri.com</p>
+      <button id="register" onclick="myalert()">Register Now</button>
+      </form>
+      <!-- <div id="googleRight">
+        <div id="minime">
+          <span class="dot">OR</span>
+          <div class="googleSignUpWrapper">
+            <div class="google-sigup-block">
+              <span class="signupwith main-2">Continue with</span>
+              
+                <span class="icon-holder">
+                  <img src="//static.naukimg.com/s/7/104/assets/images/google-icon.9273ac87.svg" class="socialIcnImg">
+                </span>
+                <span class="google-text">Google</span>
+              </button>
+            </div>
+          </div>
+          </div> -->
+      </div>
+        </div>
+
+     
+       </div>
+
+       <footer>
+        <div id="downDiv" >
+          <ul id="pagedown">
+            <li>
+              <a href="//www.infoedge.in/" target="_blank">About Us</a>
+            </li>
+            <li>
+              <a href="https://www.naukri.com/mynaukri/mn_contactus.php" target="_blank">Contact Us</a>
+            </li>
+            <li>
+              <a href="//my.naukri.com/faq/faq.php" target="_blank">FAQs</a>
+            </li>
+            <li>
+              <a href="https://www.naukri.com/termsconditions" target="_blank">Terms and Conditions</a>
+            </li>
+            <li>
+              <a href="//w5.naukri.com/fdbck/main/feedback.php" target="_blank">Report a Problem</a>
+            </li>
+            <li>
+              <a href="https://www.naukri.com/privacypolicy" target="_blank">Privacy Policy</a>
+            </li>
+          </ul>
+          <p>All rights reserved © 2022 Info Edge India Ltd.</p>
+        </div>
+      </footer>
+      
+  </body>
+</html>
+
+<script>
+
+  function myalert(){
+    event.preventDefault();
+    alert("Registered successfully ")
+  }
+</script>
