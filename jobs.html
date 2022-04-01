@@ -1,0 +1,883 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Jobs | Naukri</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      #submit{
+        background-color: rgba(90, 20, 148, 0.809);
+        border-radius: 20px;
+      
+      }
+        .dropdown:hover.dropdown-menu{ 
+            display: block;
+        }
+        body{
+            font-family : 'Work Sans', sans-serif;
+            background-color:hwb(0 91% 0%)
+        }
+      
+        #search{
+            display: grid;
+            grid-template-columns: 50% 30% 10%;
+            width: 60%;
+          gap:10px;
+            margin:auto;
+            margin-top:100px;
+            margin-bottom: 100px;
+        }
+       #search>input{
+           border: 2px solid  rgba(132, 168, 206, 0.357);
+           padding:10px;
+       }
+       #location{
+          
+        width:80%;
+        margin:0 auto;
+        display:grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: auto;
+        cursor: pointer;
+        text-align: center;
+    background-color:white;
+     justify-content: center;
+     align-items:center;
+     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+               }
+      div> img{
+           width: 150px;
+           height: 150px;;
+           margin-bottom: 20px;
+           margin-top: 20px;
+           border-radius: 50%;
+
+       }
+       a{
+           text-decoration: none;
+           color: black;
+       }
+       a:hover{
+         text-decoration:solid;
+         /* text-shadow: 0 0 0px white, 0 0 3px black;    */
+           /* color: black; */
+         /* font-size: larger; */
+         /* background-color:bisque; */
+         box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+                           /* border-radius:5px; */
+
+            }
+#belowlocation{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:auto ;
+    width:82%;
+    margin:auto;
+    margin-top: 20px;
+    gap: 5px;
+    padding: 10px;
+
+}
+#belowlocation>div{
+    padding:20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color:white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-bottom: 50px;
+
+}
+     .jobsbycompany{
+ /* border: 1px solid black; */
+         width:80%;
+         margin:auto;
+         display: grid;
+         grid-template-columns: repeat(5,1fr);
+         grid-template-rows:100px;
+        padding: 10px;
+         justify-content: center;
+         align-items: center;
+text-align: center;
+
+
+     }
+     .dropdown:hover>.dropdown-menu{
+display:block; 
+    }
+    .navv>div{
+      width: 100%;
+      display:flex;
+      margin:auto;
+    }
+    .des{
+line-height: -4px ;
+}
+    .row>div {
+        /* border: 1px solid lightgray; */
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    .box{
+        display:grid;
+        width:90%;
+        margin:auto;
+        grid-template-columns:1.5fr 3fr 2fr;
+        grid-template-rows: auto;
+        gap: 20px;
+        text-decoration:none ;
+        
+    }
+    .row>div>div>a{
+        text-decoration:none;
+        color:rgb(38, 38, 38);
+    }
+    .box{
+      display: none;
+      
+    }
+    .b{
+      background-color:blue;
+      color:white;
+      border-radius:5px;
+      border:1px solid rgb(27, 157, 105) ;
+      
+    }
+    .b:hover{
+      /* background-color:rgb(14, 17, 79); */
+      box-shadow: rgba(1, 25, 206, 0.582) 0px 8px 24px;
+    }
+    #BDM {
+      display: none;
+    }
+    #FSD{
+      display: none;
+    }
+    #mumbai{
+      display: none;
+      
+    }
+    .right{
+      display:grid;
+      width:100%;
+      margin:auto;
+      grid-template-columns:repeat(2,1fr);
+      grid-template-rows: 50 px;
+    }
+    .right>img{
+      width:50%;
+      height:50%;
+      border-radius: 2px;
+    }
+    .src{
+      border-radius: 1px;
+      width:100%;
+      height:50%;
+    }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navv">
+        <div class="container-fluid">
+      
+               <div class="container">
+            <a class="navbar-brand" href="#">
+              <img src="https://static.naukimg.com/s/4/100/i/naukri_Logo.png" alt="" width="200" height="34">
+            </a>
+          </div>
+         
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Jobs
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="jobs.html">Search Jobs </a></li>
+                      <li><a class="dropdown-item" href="#">Jobs By location </a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Jobs By skills</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Recruiters
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Recruiters Login</a></li>
+                      <l><a class="dropdown-item" href="#">Create Recruiters ID</a></l>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Data Base access</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   companies
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                </ul>
+           
+        </div>
+        </div>
+      </nav>
+      <form>
+<div id="search">
+<input type="text" placeholder="Skills, Designation,companies" id="searchbox1">
+<input type="text" placeholder="Location,Locality" id="searchbox2">
+<!-- <button type="button" class="btn btn-primary">Search</button> -->
+<script type="text/javascript">
+  function pageredirect(){
+    document.querySelector("#main").style.display="none";
+    document.querySelector(".box").style.display="grid";
+
+  }
+</script>
+<input type="submit" value="Search" class="b" href onclick="pageredirect()" id="submitt">
+<!-- <input type="submit" value="Search" class="b" href onclick="fun()" id="submitt"> -->
+</div>
+
+      </form>
+      <div id="main">
+<div id="location">
+    <div>
+       <img src="https://www.seekpng.com/png/detail/90-905415_gateway-of-india-full-hd-maps-locations-mumbai.png" >
+       <p><a href="http://clipartmax.com"> Jobs in Mumbai</a> </p>
+    </div>
+    <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiSqwe0Oi-aMz_Q_UcND1HvEw41FlaNBCCPpJ6x8EJecWgkj2j7cyc3Oe8ZzRLRRjEebA&usqp=CAU" >
+        <p><a href="http://clipartmax.com"> Jobs in Delhi</a></p>
+     </div>
+     <div>
+        <img src="data:image/png;base64,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" >
+        <p><a href="http://clipartmax.com"> Jobs in Hyderabad</a></p>
+     </div>
+     <div>
+        <img src="https://as2.ftcdn.net/v2/jpg/02/81/01/81/500_F_281018146_qAWE7Na1jKGZFrHa1wGAruhGDMmDP4R5.jpg">
+        <p><a href="#" > Jobs in Bangalore</a></p>
+     </div>
+     <div>
+        <img src="https://thumbs.dreamstime.com/t/outline-pune-india-city-skyline-colored-buildings-isolated-white-vector-illustration-maharashtra-cityscape-landmarks-241078003.jpg">
+        <p><a href="http://clipartmax.com"> Jobs in Pune</a></p>
+     </div>
+
+</div>
+
+<div id="belowlocation">
+    
+    <div class="inner-content">
+        <div>
+            <p><a href="#">Bank Jobs</a></p>
+            <p><a href="#">Marketing Jobs Jobs</a></p>
+            <p><a href="#">Sales Jobs</a></p>
+            <p><a href="#">BDM Jobs</a></p>
+            <p><a href="#">Web-developement jobs</a></p>
+
+        </div>
+        <div>
+            <p><a href="#">Full -Time jobs</a></p>
+            <p><a href="#">Part-time Jobs</a></p>
+            <p><a href="#">Hybrid Jobs</a></p>
+            <p><a href="#">WFH Jobs</a></p>
+            <p><a href="#">Freelance Jobs</a></p>
+        </div>
+    </div>
+
+
+    <div>
+        <div>
+            <p><a href="#">Pharmashist Jobs</a></p>
+            <p><a href="#">DBA Jobs</a></p>
+            <p><a href="#">Oracle Jobs</a></p>
+            <p><a href="#">EXCEL Jobs</a></p>
+            <p><a href="#">MS office Jobs</a></p>
+
+        </div>
+        <div>
+            <p><a href="#">Data-entry Jobs</a></p>
+            <p><a href="#">Store manager Jobs</a></p>
+            <p><a href="#">VBA Jobs</a></p>
+            <p><a href="#">Remote Jobs</a></p>
+            <p><a href="#">Design Jobs</a></p>
+        </div>
+    </div>
+</div>
+<div class="jobsbycompany">
+    <a href="#"><img src="https://img.naukimg.com/logo_images/v2/892542.gif">
+    <p>TCS</p></a>
+    <a href="#"><img src="https://img.naukimg.com/logo_images/v2/1384.gif"><p>Wipro</p></a>
+    <a href="#"><img src="https://img.naukimg.com/logo_images/v2/892542.gif"><p>ICICI</p></a>
+    <a href="#"><img src="https://img.naukimg.com/fc_images/v2/16987.gif"><p>IBM</p></a>
+    <a href="#"><img src="https://img.naukimg.com/logo_images/v2/11014.gif"><p>Intel</p></a>
+
+</div>
+      </div>
+
+
+      <div class="row box">
+        <div style="padding:20px; line-height:20px;" class="col1">
+     
+          <div class="form-check">
+            <p>Filter by location</p>
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Remote
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+            <label class="form-check-label" for="flexCheckChecked">
+              Bangalore
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+            <label class="form-check-label" for="flexCheckChecked">
+            Delhi
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+            <label class="form-check-label" for="flexCheckChecked">
+            Mumbai
+            </label>
+          </div>
+          <br>
+          <hr class="dropdown-divider">
+          <br>
+          <div class="form-check">
+            <p>Filter by Salary</p>
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              3-6 lakhs(1233)
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+            <label class="form-check-label" for="flexCheckChecked">
+              5-8 lakhs(2233)
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+            <label class="form-check-label" for="flexCheckChecked">
+              8-10 lakhs(933)
+
+            </label>
+          </div>
+
+          <br>    
+          <hr class="dropdown-divider">
+
+    <br>
+          <div class="form-check">
+            <p>filter by Experience</p>
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              fresher(0-1 yrs)
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+            <label class="form-check-label" for="flexCheckChecked">
+              Intermidiate(1-2 yrs)
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+            <label class="form-check-label" for="flexCheckChecked">
+            experienced(>2 yrs)
+            </label>
+          </div>
+
+    </div>
+        <div class="col2">
+    
+         
+
+<div id="BDM">
+         <a href="#"><div class="des">
+          <h3 class="title">Business Development Manager</h3>
+          <p class="companyname">Nolan Education India  3.8 <i class="fa-regular fa-star yellow"></i>   &nbsp     &nbsp   <span class="link-primary">(13466 Views)</span></p>
+          <p><i class="fa-solid fa-briefcase-blank"></i><span class="exp">2.5 yrs</span> &nbsp &nbsp &#8377 <span class="salary">7,00,000,00 -9,00,000,00 p.a </span> &nbsp &nbsp <i class="fa-solid fa-location-dot"></i> <span class="location">Banglore</span> </p>
+          <p><i class="fa-solid fa-address-card"></i> &nbsp Good to have knowledge On Ms office and google analytics</p>
+          <p> <i class="fa-solid fa-business-time"></i> &nbsp Posted 2days ago</p>
+
+         </div>
+         </a>
+         <hr style="width: 100%; color:grey; text-align:center; ">
+
+         <a href="#"><div class="des">
+          <h3 class="title">Urgent Hiring | Business Development</h3>
+          <p class="companyname">Nike India  3.8 <i class="fa-regular fa-star yellow"></i>   &nbsp     &nbsp   <span class="link-primary">(13466 Views)</span></p>
+          <p><i class="fa-solid fa-briefcase-blank"></i><span class="exp">3.5 yrs</span> &nbsp &nbsp &#8377 <span class="salary">9,00,000,00 -12,00,000,00 p.a </span> &nbsp &nbsp <i class="fa-solid fa-location-dot"></i> <span class="location">Banglore</span> </p>
+          <p><i class="fa-solid fa-address-card"></i> &nbsp Good to have knowledge On Ms office and google analytics</p>
+          <p> <i class="fa-solid fa-business-time"></i> &nbsp Posted 2days ago</p>
+
+         </div>
+         </a>
+         <hr style="width: 100%; color:grey; text-align:center; ">
+
+         <a href="#"><div class="des">
+          <h3 class="title">Business Statistics</h3>
+          <p class="companyname">Masai School  3.8 <i class="fa-regular fa-star yellow"></i>   &nbsp     &nbsp   <span class="link-primary">(13466 Views)</span></p>
+          <p><i class="fa-solid fa-briefcase-blank"></i><span class="exp">2.5 yrs</span> &nbsp &nbsp &#8377 <span class="salary">7,00,000,00 -9,00,000,00 p.a </span> &nbsp &nbsp <i class="fa-solid fa-location-dot"></i> <span class="location">Banglore</span> </p>
+          <p><i class="fa-solid fa-address-card"></i> &nbsp Good to have knowledge On Ms office and google analytics</p>
+          <p> <i class="fa-solid fa-business-time"></i> &nbsp Posted 2days ago</p>
+
+         </div>
+         </a>
+         <hr style="width: 100%; color:grey; text-align:center; ">
+
+         <a href="#"><div class="des">
+          <h3 class="title">Business Development</h3>
+          <p class="companyname">Infoedge India.  3.8 <i class="fa-regular fa-star yellow"></i>   &nbsp     &nbsp   <span class="link-primary">(13466 Views)</span></p>
+          <p><i class="fa-solid fa-briefcase-blank"></i><span class="exp">2.5 yrs</span> &nbsp &nbsp &#8377 <span class="salary">7,00,000,00 -9,00,000,00 p.a </span> &nbsp &nbsp <i class="fa-solid fa-location-dot"></i> <span class="location">Banglore</span> </p>
+          <p><i class="fa-solid fa-address-card"></i> &nbsp Good to have knowledge On Ms office and google analytics</p>
+          <p> <i class="fa-solid fa-business-time"></i> &nbsp Posted 2days ago</p>
+
+         </div>
+         </a>
+         <hr style="width: 100%; color:grey; text-align:center; ">
+</div>
+
+
+
+
+<div id="FSD">
+  <a href="#"><div class="des">
+   <h3 class="title">Full-stack Developer</h3>
+   <p class="companyname">l&T infotech India.  3.8 <i class="fa-regular fa-star yellow"></i>   &nbsp     &nbsp   <span class="link-primary">(13466 Views)</span></p>
+   <p><i class="fa-solid fa-briefcase-blank"></i><span class="exp">2.5 yrs</span> &nbsp &nbsp &#8377 <span class="salary">5,00,000,00 -9,00,000,00 p.a
+      </span> &nbsp &nbsp <i class="fa-solid fa-location-dot"></i> <span class="location">Gachiwali | Hyderabad</span> </p>
+   <p><i class="fa-solid fa-address-card"></i> &nbsp Good to have knowledge On Ms office and google analytics</p>
+   <p> <i class="fa-solid fa-business-time"></i> &nbsp Posted 2days ago</p>
+
+  </div>
+  </a>
+  <hr style="width: 100%; color:grey; text-align:center; ">
+  <a href="#"><div class="des">
+    <h3 class="title">Full-stack Developer | javascript </h3>
+    <p class="companyname">Infoedge India.  4.0 <i class="fa-regular fa-star yellow"></i>   &nbsp     &nbsp   <span class="link-primary">(1466 Views)</span></p>
+    <p><i class="fa-solid fa-briefcase-blank"></i><span class="exp">2.5 yrs</span> &nbsp &nbsp &#8377 <span class="salary">7,00,000,00 -9,00,000,00 p.a </span>
+       &nbsp &nbsp <i class="fa-solid fa-location-dot"></i> <span class="location">Hyderabad</span> </p>
+    <p><i class="fa-solid fa-address-card"></i> &nbsp Good to have knowledge On Ms office and google analytics</p>
+    <p> <i class="fa-solid fa-business-time"></i> &nbsp Posted 2days ago</p>
+ 
+   </div>
+   </a>
+   <hr style="width: 100%; color:grey; text-align:center; ">
+   <a href="#"><div class="des">
+    <h3 class="title">Full-stack Developer ,java,javascript</h3>
+    <p class="companyname">TCS   4.1 <i class="fa-regular fa-star yellow"></i>   &nbsp     &nbsp   <span class="link-primary">(1336 Views)</span></p>
+    <p><i class="fa-solid fa-briefcase-blank"></i><span class="exp">2.5 yrs</span> &nbsp &nbsp &#8377 <span class="salary">7,00,000,00 -10,00,000,00 p.a </span> &nbsp &nbsp
+       <i class="fa-solid fa-location-dot"></i> <span class="location">Hyderabad</span> </p>
+    <p><i class="fa-solid fa-address-card"></i> &nbsp Good to have knowledge On Ms office and google analytics</p>
+    <p> <i class="fa-solid fa-business-time"></i> &nbsp Posted 2days ago</p>
+ 
+   </div>
+   </a>
+   <hr style="width: 100%; color:grey; text-align:center; ">
+   <a href="#"><div class="des">
+    <h3 class="title">Full-stack Web Developer </h3>
+    <p class="companyname">Infosys  3.9 <i class="fa-regular fa-star yellow"></i>   &nbsp     &nbsp   <span class="link-primary">(13466 Views)</span></p>
+    <p><i class="fa-solid fa-briefcase-blank"></i><span class="exp">2.5 yrs</span> &nbsp &nbsp &#8377
+       <span class="salary">11,00,000,00 -19,00,000,00 p.a </span> &nbsp &nbsp <i class="fa-solid fa-location-dot"></i> <span class="location">Hightech city ,Hyderabad</span> </p>
+    <p><i class="fa-solid fa-address-card"></i> &nbsp Good to have knowledge On Ms office and google analytics</p>
+    <p> <i class="fa-solid fa-business-time"></i> &nbsp Posted 2days ago</p>
+ 
+   </div>
+   </a>
+   <hr style="width: 100%; color:grey; text-align:center; ">
+
+
+
+</div>
+       
+
+
+<div id="mumbai">
+  <a href="#"><div class="des">
+   <h3 class="title">Business Analyst</h3>
+   <p class="companyname">Infoedge India.  3.8 <i class="fa-regular fa-star yellow"></i>   &nbsp     &nbsp   <span class="link-primary">(13466 Views)</span></p>
+   <p><i class="fa-solid fa-briefcase-blank"></i><span class="exp">2.5 yrs</span> &nbsp &nbsp &#8377 <span class="salary">7,00,000,00 -9,00,000,00 p.a </span>
+     &nbsp &nbsp <i class="fa-solid fa-location-dot"></i> <span class="location">Mumbai,bangalore</span> </p>
+   <p><i class="fa-solid fa-address-card"></i> &nbsp Good to have knowledge On Ms office and google analytics</p>
+   <p> <i class="fa-solid fa-business-time"></i> &nbsp Posted 2days ago</p>
+
+  </div>
+  </a>
+  <hr style="width: 100%; color:grey; text-align:center; ">
+  <a href="#"><div class="des">
+    <h3 class="title">Data Analyst</h3>
+    <p class="companyname">Saras analytics</p>  3.8 <i class="fa-regular fa-star yellow"></i>   &nbsp     &nbsp   <span class="link-primary">(13466 Views)</span></p>
+    <p><i class="fa-solid fa-briefcase-blank"></i><span class="exp">2.5 yrs</span> &nbsp &nbsp &#8377 <span class="salary">7,00,000,00 -9,00,000,00 p.a </span>
+      &nbsp &nbsp <i class="fa-solid fa-location-dot"></i> <span class="location">Mumbai,delhi ,bangalore</span> </p>
+    <p><i class="fa-solid fa-address-card"></i> &nbsp Good to have knowledge On Ms office and google analytics</p>
+    <p> <i class="fa-solid fa-business-time"></i> &nbsp Posted 2days ago</p>
+ 
+   </div>
+   </a>
+   <hr style="width: 100%; color:grey; text-align:center; ">
+   <a href="#"><div class="des">
+    <h3 class="title">Data Analyst | PowerBI </h3>
+    <p class="companyname">Infoedge India.  3.8 <i class="fa-regular fa-star yellow"></i>   &nbsp     &nbsp   <span class="link-primary">(13466 Views)</span></p>
+    <p><i class="fa-solid fa-briefcase-blank"></i><span class="exp">2.5 yrs</span> &nbsp &nbsp &#8377 <span class="salary">7,00,000,00 -9,00,000,00 p.a </span>
+      &nbsp &nbsp <i class="fa-solid fa-location-dot"></i> <span class="location">Mumbai,bangalore</span> </p>
+    <p><i class="fa-solid fa-address-card"></i> &nbsp Good to have knowledge On Ms office and google analytics</p>
+    <p> <i class="fa-solid fa-business-time"></i> &nbsp Posted 2days ago</p>
+ 
+   </div>
+   </a>
+   <hr style="width: 100%; color:grey; text-align:center; ">
+   <a href="#"><div class="des">
+    <h3 class="title">Data Analyst</h3>
+    <p class="companyname">Infoedge India.  3.8 <i class="fa-regular fa-star yellow"></i>   &nbsp     &nbsp   <span class="link-primary">(13466 Views)</span></p>
+    <p><i class="fa-solid fa-briefcase-blank"></i><span class="exp">2.5 yrs</span> &nbsp &nbsp &#8377 <span class="salary">7,00,000,00 -9,00,000,00 p.a </span>
+      &nbsp &nbsp <i class="fa-solid fa-location-dot"></i> <span class="location">Mumbai,hyderabad,bangalore</span> </p>
+    <p><i class="fa-solid fa-address-card"></i> &nbsp Good to have knowledge On Ms office and google analytics</p>
+    <p> <i class="fa-solid fa-business-time"></i> &nbsp Posted 2days ago</p>
+ 
+   </div>
+   </a>
+   <hr style="width: 100%; color:grey; text-align:center; ">
+</div>
+
+        </div>
+        <div class="col3">
+      
+      <img src="https://tpc.googlesyndication.com/simgad/14514849567739895191" alt="" class="src">
+
+      <div class="right">
+        <img src="https://img.naukimg.com/fc_images/v2/731195.gif">
+        <img src="https://img.naukimg.com/fc_images/v2/15001.gif" alt="" class="src">
+        <img src="https://img.naukimg.com/fc_images/v2/15001.gif" alt="" class="src">
+
+        <img src="https://img.naukimg.com/fc_images/v2/158869.gif" alt="">
+        <img src="https://img.naukimg.com/fc_images/v2/4498568.gif" alt="">
+
+
+              </div>
+      </div>
+</div>
+      <!-- a=documnent.createElement("a")
+      a.setAttribute("href", "#")
+      div=documnent.createElement("div")
+      div.setAttribute("class", "des") -->
+
+
+
+      
+<!-- Footer -->
+<footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+  
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+  
+      <!-- Section: Form -->
+      <section class="">
+        <form action="">
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto">
+              <p class="pt-2">
+                <strong>Sign up for our newsletter</strong>
+              </p>
+            </div>
+            <!--Grid column-->
+  
+            <!--Grid column-->
+            <div class="col-md-5 col-12">
+              <!-- Email input -->
+              <div class="form-outline form-white mb-4">
+                <input type="email" id="form5Example21" class="form-control" />
+                <label class="form-label" for="form5Example21">Email address</label>
+              </div>
+            </div>
+            <!--Grid column-->
+  
+            <!--Grid column-->
+            <div class="col-auto">
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-outline-light mb-4">
+                Subscribe
+              </button>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+      </section>
+      <!-- Section: Form -->
+  
+      <!-- Section: Text -->
+      
+      <!-- Section: Text -->
+  
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Jobseekers</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Upload Resume</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Search Jobs</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Resume Program</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Report a problem</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-3 mb-2 mb-md-0">
+            <h5 class="text-uppercase">Employers</h5>
+  
+            <ul class="list-unstyled mb-1">
+              <li>
+                <a href="#!" class="text-white">Job P0sting</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Resume Database access</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Naukri RMS</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Recruiters login</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Information</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">About Us</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Career</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Insigths</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Mission </a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Naukri Learning</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Software Development</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Artificial Intelligence</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Automation</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Creative Design</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright:
+      <a class="text-white" href="https://Masaischool.com/">Masaischool.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6a9ec3b6d8.js" crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+    <script>
+      joblist=[{
+
+        jobtitle:  "Business Analyst",
+        comapanyName: " Amazon",
+        CTC : " 10,00,000-12,00,000 p.a",
+        location : "Banglore",
+        jd : "Good understanding of technology - tool like MS EXCEL,Power Bi,jira",
+        posted : " 3 days ago" 
+
+      },
+      {
+
+jobtitle:  "Business development manager",
+comapanyName: " Rayzer Pay",
+CTC : " 10,00,000-12,00,000 p.a",
+location : "Banglore",
+jd : "Good understanding of technology - tool like MS EXCEL,Power Bi,jira",
+posted : " 3 days ago" 
+
+},
+{
+
+jobtitle:  "Full-stack developer ",
+comapanyName: " Amazon",
+CTC : " 10,00,000-12,00,000 p.a",
+location : "Banglore",
+jd : " 3 years Experience in technologies - react,c,javascript,SQL",
+posted : " 3 days ago" 
+
+},
+{
+
+jobtitle:  "Data Analyst",
+comapanyName: " Amazon",
+CTC : " 10,00,000-12,00,000 p.a",
+location : "Banglore",
+jd : "Good understanding of technology - tool like MS EXCEL,Power Bi,jira",
+posted : " 3 days ago" 
+
+},
+
+
+
+    ]
+    localStorage.setItem("joblist", JSON.stringify(joblist))
+    document.querySelector("form").addEventListener("submit", searchfunction)
+    // document.querySelector("button").addEventListener("click", searchfunction)
+        function searchfunction(){
+
+     var skill=document.querySelector("#searchbox1").value;
+     var  location=document.querySelector("#searchbox2").value;
+
+     if(skill=="Business Development Manager"){
+    document.querySelector("#BDM").style.display="block";
+  }
+  if(skill=="Full stack developer"){
+    
+    document.querySelector("#FSD").style.display="block";
+    document.querySelector("#BDM").style.display="none"; 
+    document.querySelector("#mumbai").style.display="none";
+  }
+  if(skill=="Business Analyst"){
+    
+    document.querySelector("#FSD").style.display="none";
+    document.querySelector("#BDM").style.display="none"; 
+    document.querySelector("#mumbai").style.display="block"; 
+  }
+     
+     // console.log(skill,location);
+     console.log( fun(skill,location))
+      window.stop();
+      event.preventDefault();
+    }
+    
+    function fun(skill,location){
+
+    
+    for (i=0;i<joblist.length;i++){
+      
+      for(var a in joblist[i]){
+
+        if(joblist[i][a]==skill || joblist[i][a]==location){
+          return joblist[i]
+        
+          break;
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+  
+    </script>
+  </body>
+</html>
