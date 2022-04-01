@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .applyBlue{
+            height: 80px;
+            background-color: #D4E5FF;
+            z-index: 5;
+        }
+        #applyContainer{
+            display: flex;
+            position: relative;
+         
+        }
+        #applyLeftSection{
+            border: 1px solid red;
+            width: 60%;
+            z-index: 4;
+  opacity: 1;
+  position: absolute;
+  top: 40px;
+  left: 180px;
+ 
+  
+  background-color: #fdd;
+        }
+        #applyRightSection{
+            border: 1px solid red;
+            width: 40%;
+            z-index: 4;
+  opacity: 1;
+  position: absolute;
+  top: 40px;
+  left: 180px;
+ 
+
+  background-color: #fdd;
+        }
+    </style>
+</head>
+<body>
+    Nav bar
+    <div id="applyContainer">
+        <div class="applyBlue"></div>
+        <div id="applyLeftSection">
+
+        </div>
+        <div id="applyRightSection">
+
+        </div>
+    </div>
+</body>
+</html>
