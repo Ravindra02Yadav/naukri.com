@@ -141,7 +141,7 @@
         margin-left: 1px;
       }
 
-      #exampleInputEmail1{
+      #exampleInputEmail1 ,#mobile{
       font-size: 14px;
       /* line-height: 22px; */
       /* padding: 9px 16px 11px; */
@@ -271,6 +271,21 @@
         text-decoration: none;
 
       }
+
+      #tomobile{
+        text-decoration: none;
+        color: white;
+        padding-right: 0px;
+        
+      }
+
+      #exampleCheck1{
+        border-radius: 10px;
+        background-color: #18c1a3;
+        border: 1px solid #939dbf;
+        font-size: 10px;
+        color: white;
+      }
       
       
 
@@ -333,7 +348,7 @@
 
       <div class="mb-3">
          <label for="exampleInputEmail1" class="form-label">Full Name</label>
-         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="What is your name?">
+         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="What is your name?">
       </div>
 
       <div class="mb-3">
@@ -344,12 +359,12 @@
 
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Password</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Creat a password for your account">
+        <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Creat a password for your account">
         <div id="emailHelp" class="form-text">Minimum 6 characters required</div>
 
               <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Mobile Number</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Mobile Number">
+        <label for="exampleInputEmail1" class="form-label" id="InputMobile">Mobile Number</label>
+        <input type="number" class="form-control" id="mobile" aria-describedby="emailHelp" placeholder="Mobile Number">
         <div id="emailHelp" class="form-text">Recruiters will call you on this number</div>
       </div>
 
@@ -386,12 +401,16 @@
         <input type="text" id="resumebox" placeholder="DOC,DOCx,PDF,RTF | Max:2MB">
       </div>
       <p class="resumefont">Recruiters give first preference to candidates who have a resume</p>
-      <i class="fa-solid fa-calendar-check" id="checkout"></i>
+      <!-- <i class="fa-solid fa-calendar-check" id="checkout"></i> -->
+
+      <span>
+      <button id="exampleCheck1">submit</button>
       <span class="chk-label">Send me important updates on<i class="fa-brands fa-whatsapp" id="whattsap"></i>
-        <span class="whatsappText">WhatsApp</span></span>
+        <span class="whatsappText">WhatsApp</span></span></span>
+
 
       <p class="terms">By clicking Register, you agree to the Terms and Conditions & Privacy Policy of Naukri.com</p>
-      <button id="register" onclick="myalert()">Register Now</button>
+      <button id="register" onclick="myalert()"><a href="mobile.html" id="tomobile">Register Now</a></button>
       </form>
       <!-- <div id="googleRight">
         <div id="minime">
@@ -445,8 +464,14 @@
 
 <script>
 
-  function myalert(){
-    event.preventDefault();
-    alert("Registered successfully ")
-  }
+ document.querySelector("#exampleCheck1").addEventListener("click",myfunction);
+
+ function myfunction(){
+   event.preventDefault();
+    console.log("in ")
+   var enteredMobile=document.querySelector("#mobile").value;
+   console.log(enteredMobile);
+
+   localStorage.setItem("InputMobile",JSON.stringify(enteredMobile));
+ }
 </script>
