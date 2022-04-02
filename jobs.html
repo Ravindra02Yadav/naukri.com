@@ -201,7 +201,7 @@ line-height: -4px ;
                   <li class="nav-item dropdown">
                     <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Jobs
-                    </a>
+                    </a></li>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="jobs.html">Search Jobs </a></li>
                       <li><a class="dropdown-item" href="#">Jobs By location </a></li>
@@ -494,7 +494,7 @@ line-height: -4px ;
    </div>
    </a>
    <hr style="width: 100%; color:grey; text-align:center; ">
-   <a href="#/applyForJob.html><div class="des">
+   <a href="/applyForJob.html"><div class="des">
     <h3 class="title">Full-stack Web Developer </h3>
     <p class="companyname">Infosys  3.9 <i class="fa-regular fa-star yellow"></i>   &nbsp     &nbsp   <span class="link-primary">(13466 Views)</span></p>
     <p><i class="fa-solid fa-briefcase-blank"></i><span class="exp">2.5 yrs</span> &nbsp &nbsp &#8377
@@ -524,7 +524,7 @@ line-height: -4px ;
   </div>
   </a>
   <hr style="width: 100%; color:grey; text-align:center; ">
-  <a href="/applyForJob.htm"><div class="des">
+  <a href="#"><div class="des">
     <h3 class="title">Data Analyst</h3>
     <p class="companyname">Saras analytics</p>  3.8 <i class="fa-regular fa-star yellow"></i>   &nbsp     &nbsp   <span class="link-primary">(13466 Views)</span></p>
     <p><i class="fa-solid fa-briefcase-blank"></i><span class="exp">2.5 yrs</span> &nbsp &nbsp &#8377 <span class="salary">7,00,000,00 -9,00,000,00 p.a </span>
@@ -535,7 +535,7 @@ line-height: -4px ;
    </div>
    </a>
    <hr style="width: 100%; color:grey; text-align:center; ">
-   <a href="/applyForJob.htm"><div class="des">
+   <a href="#"><div class="des">
     <h3 class="title">Data Analyst | PowerBI </h3>
     <p class="companyname">Infoedge India.  3.8 <i class="fa-regular fa-star yellow"></i>   &nbsp     &nbsp   <span class="link-primary">(13466 Views)</span></p>
     <p><i class="fa-solid fa-briefcase-blank"></i><span class="exp">2.5 yrs</span> &nbsp &nbsp &#8377 <span class="salary">7,00,000,00 -9,00,000,00 p.a </span>
@@ -765,7 +765,19 @@ line-height: -4px ;
     <!-- Copyright -->
   </footer>
   <!-- Footer -->
+    <!-- Optional JavaScript; choose one of the two! -->
 
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6a9ec3b6d8.js" crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
 
     <script>
       joblist=[{
@@ -814,33 +826,6 @@ posted : " 3 days ago"
     ]
     localStorage.setItem("joblist", JSON.stringify(joblist))
     document.querySelector("form").addEventListener("submit", searchfunction)
-
-function fun(){
-
-  var skill=document.querySelector("#searchbox1").value;
-     var  location=document.querySelector("#searchbox2").value;
-joblist.map(function(elem){
-if(skill==elem.jobtitle){
-
-  // <div class="col2">
-
-   div= document.createElement("div")
-   a=document.createElement("a")
-   a.setAttribute("href","#")
-   a.setAttribute("class","des")
-   h3=document.createElement("h3")
-   h3.innerText=elem.comapanyName
-   p=document.createElement("p")
-   p.setAttribute("")
-}
-
-})
-
-
-
-
-
-}
     // document.querySelector("button").addEventListener("click", searchfunction)
         function searchfunction(){
 
@@ -894,11 +879,5 @@ if(skill==elem.jobtitle){
 
   
     </script>
-      <!-- Option 1: Bootstrap Bundle with Popper -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
-      <script src="https://kit.fontawesome.com/6a9ec3b6d8.js" crossorigin="anonymous"></script>
   </body>
 </html>
