@@ -765,19 +765,7 @@ line-height: -4px ;
     <!-- Copyright -->
   </footer>
   <!-- Footer -->
-    <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/6a9ec3b6d8.js" crossorigin="anonymous"></script>
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
 
     <script>
       joblist=[{
@@ -826,6 +814,33 @@ posted : " 3 days ago"
     ]
     localStorage.setItem("joblist", JSON.stringify(joblist))
     document.querySelector("form").addEventListener("submit", searchfunction)
+
+function fun(){
+
+  var skill=document.querySelector("#searchbox1").value;
+     var  location=document.querySelector("#searchbox2").value;
+joblist.map(function(elem){
+if(skill==elem.jobtitle){
+
+  // <div class="col2">
+
+   div= document.createElement("div")
+   a=document.createElement("a")
+   a.setAttribute("href","#")
+   a.setAttribute("class","des")
+   h3=document.createElement("h3")
+   h3.innerText=elem.comapanyName
+   p=document.createElement("p")
+   p.setAttribute("")
+}
+
+})
+
+
+
+
+
+}
     // document.querySelector("button").addEventListener("click", searchfunction)
         function searchfunction(){
 
@@ -879,5 +894,11 @@ posted : " 3 days ago"
 
   
     </script>
+      <!-- Option 1: Bootstrap Bundle with Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/6a9ec3b6d8.js" crossorigin="anonymous"></script>
   </body>
 </html>
