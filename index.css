@@ -524,3 +524,42 @@ hr{
     background-color: white;
     border: 1px solid #4a90e2;
   }
+  .applyFooter{
+    background-color: #2E3339;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 20px;
+}
+.applyFooter>div>img{
+    height: 70px;
+    margin-top: 0;
+}
+.applyFooter>div{
+   font-size: 75%;
+    }
+    .applyFooter>div>p{
+        margin: 4px;
+        color: #9d9fa0;
+    }
+
+.socialLogo{
+    font-size: 150%;
+}
+.fb{
+    color: #3B5998;
+}
+.twitter{
+color: #38A0CD;
+}
+.linkedin{
+color: #00759E;
+}
+.copyrightPart{
+    background-color: #E2E2E2;
+     text-align: center;
+     padding: 10px;
+    
+}

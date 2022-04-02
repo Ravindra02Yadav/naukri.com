@@ -250,18 +250,7 @@ display: inline-block;
 .skillsDiv{
     margin-bottom: 10px;
 }
-.socialLogo{
-    font-size: 150%;
-}
-.fb{
-    color: #3B5998;
-}
-.twitter{
-color: #38A0CD;
-}
-.linkedin{
-color: #00759E;
-}
+
 .socialHandle{
 display: flex;
 justify-content: space-between;
@@ -354,4 +343,87 @@ margin-bottom: 15px;
 #topStickySend{    display: flex;
     align-items: center;
 }
+
+.applyFooter{
+    background-color: #2E3339;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 20px;
+}
+.applyFooter>div>img{
+    height: 70px;
+    margin-top: 0;
+}
+
+
+.socialLogo{
+    font-size: 150%;
+}
+.fb{
+    color: #3B5998;
+}
+.twitter{
+color: #38A0CD;
+}
+.linkedin{
+color: #00759E;
+}
+.copyrightPart{
+    background-color: #E2E2E2;
+     text-align: center;
+     padding: 10px;
+    
+}
+.applyFooter>div>p{
+   
+    color: #9d9fa0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
