@@ -1,28 +1,46 @@
-#navBar{
-    display: flex;
-    margin: auto;
-padding: 10px;
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-bottom: 0.5rem;
+    font-family: ‘Inter’, sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+    }
 
+a{
+    text-decoration: none;
+    color: inherit;
 }
 span{
     color: #8695b6;
 }
 .heading{
-    font-family: 'Roboto Slab', serif;  
+    font-family: 'Roboto Slab', serif; 
+     
     text-align: center;
     margin-top: 50px;
     margin-bottom: 30px;
+}
+#navBar{
+    display: flex;
+ margin: auto;
+padding: 10px;
+padding-top: 40px;
+margin-top: -70px;
+margin-left: 60px;
+width: 90%;
+position: fixed;
+background-color: white;
 }
 
 #navItem{
     display: flex;
     margin: auto;
     padding: 10px;
-    margin-top: -15px;
-    font-family: 'Inter', sans-serif;
+    margin-top: -20px;  
 font-size: 18px;
 color: #8695b6;
-}
+} 
+
 #navItem>div{
     
     padding: 10px;
@@ -36,7 +54,7 @@ color: #8695b6;
 
 }
 
-.btn-light{
+#btn-light{
     background-color: white;
     border: 1px solid #4780ff;
     color: #4780ff;
@@ -64,9 +82,11 @@ color: #8695b6;
 
 #head1{
    text-align: center;
+   margin-top: 60px;
 }
-#head1>h1{
+#head1>div>h1{
     font-family: 'Roboto Slab', serif;
+   padding-top: 50px;
     padding-bottom: -10px;
 }
 #head1>div>p{
@@ -79,16 +99,18 @@ color: #8695b6;
 #searchBar{
     display: flex;
     margin: auto;
-    width: 70%;
-   margin-bottom: 30px;
+    width: 75%;
+   margin-bottom: 40px;
     border-radius: 30px;
-    padding: 20px;
+    padding: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 #searchBar>div{
     margin: auto;
 }
-
+#serchIn{
+    width: 300px;
+}
 input {
     border-top-style: hidden;
     border-right-style: hidden;
@@ -99,7 +121,7 @@ input {
 
   input::placeholder {
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-size: 15px;
   }
 
   #experience{
@@ -108,7 +130,7 @@ input {
     border-left-style: groove;
     border-bottom-style: hidden;
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     padding-left: 5px;
   }
   
@@ -134,9 +156,10 @@ input {
     display: flex;
     background-color: #fefaf6;
     width: 55%;
+    height: 150px;
     padding: 30px;
     margin: auto;
-   
+   font-size: 15px;
 }
 #comtainerImg{
     display: grid;
@@ -147,9 +170,17 @@ input {
 #containerDisplay{
    font-family: 'Inter', sans-serif;
     width: 50%;
+padding-left: 20px;
     margin: auto;
 }
+#containerDisplay>h3{
+font-size: 25px;
+margin-top: -10px;
 
+}
+#containerDisplay>h5{
+    font-size: 15px;
+    }
 #containerBtn{
     margin: auto;
 }
@@ -182,6 +213,7 @@ input {
     margin-left: 100px;
     margin-right: 100px;
     margin-top: 30px;
+    
 }
 #feature>div{
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px; 
@@ -209,6 +241,7 @@ input {
 #feature>div>p{
     text-align: center;
     color: #8695b6;
+    
 }
 #feature>div>button{
     background-color: #f1f5ff;
@@ -258,6 +291,7 @@ input {
 #roleInfo>h2{
     width: 250px;
     font-family: 'Roboto Slab', serif; 
+   
 }
 #roleInfo>p{
     width: 200px;
@@ -433,3 +467,60 @@ input {
 hr{
     margin-top: 80px;
 }
+
+
+  /* ashwini css */
+  
+  #login{
+    width: 100%;
+    
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: #4a90e2;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+  #emailHelp{
+    text-align: right;
+    margin-bottom: 50px;
+  }
+  #otp{
+    text-align: center;
+    color: #4a90e2;
+  }
+  a{
+    text-decoration: none;
+
+  }
+  #offcanvasRight{
+    width: 472px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  #or{
+    
+    text-align: center;
+    color:#9d9fa0 ;
+  }
+  #GoogleSignIn{
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px 10px 25px;
+    border-radius: 20px;
+    width: 80%;
+    margin: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+  }
+  #icon{
+    font-size: 28px;
+    color: #4a90e2;
+  }
+  #passwardCheck{
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #4a90e2;
+  }
