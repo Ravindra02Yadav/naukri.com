@@ -18,8 +18,10 @@
                         <p class="fontThirteen">Medront</p>
                     </div>
                     <div>
-                        <span class="fontFourteen colorText wordBold tcf">Send Me Jobs Like This</span>
-                        <button type="button" class="wordBold fontFourteen btn btn-primary">APPLY</button>
+                  
+                        <span class="fontFourteen colorText wordBold ">Send Me Jobs Like This</span>
+                      
+                        <button id="btnJobApplied" type="button" class="wordBold fontFourteen btn btn-primary">APPLY</button>
         
                     </div>
                 </div>
@@ -37,16 +39,72 @@
             <div id="divFlex">
                
             <div id="applyLeftSection">
-                <!-- <div>
-                    <h5>You have successfully applied to 'React Native Devloper - Javasc...'</h5>
-                </div> -->
-                <div class="applyAdBox">
+                <div id="successJob">
+                    <div id="greenLine"></div>
+                    <div  id="successOuterSection">
+                        <div class="applyNav ">
+                             <h5 class="fontFourteen"><i id="sIconSize" class="fa-solid fa-circle-check"></i>You have successfully applied to 
+                              <span class="wordBold">'React Native Devloper - Javasc...'</span>  </h5>
+                         <h5 class="fontFourteen wordBold colorText">Send Me Jobs Like This</h5>
+                        </div>
+                        <hr>
+                        <div  class="applyNav">
+                            <p>Want callbacks from recruiters?
+                              <span class="colorText">Click here</span>   to highlight your profile and increase 
+                                your chances <br> <span class="wordBold"> Call 1800-3010-5557 now! (Toll-free)</span></p>
+                               <p style="font-size: 9px;" class="fadedText">powered by Naukri Fast Forward</p>
+                     
+                        </div>
+                    </div>
+                </div>
+                <div id="leftMoreJob" class="interestedJobs">
+                    <h5 class="fontEighteen wordBold">Jobs you might be interested in</h5>
+                    <br>
+                    <div class="inJobOuter">
+                        <div> <h4 class="fontFifteen rightTextMargin wordBold">React Native Mobile App Developer</h4>
+                        <p class="fontThirteen rightTextMargin">Excellence Technosoft Pri...  <span class="wordBold">  3.2</span> <i class="applyStarYellow fa-solid fa-star"></i> <span class="colorText">(20  reviews)</span></p>
+                        
+                        <p class="fontThirteen"> <i  class="jdIcons fa-solid fa-location-dot"></i>Noida, Delhi / NCR</p>
+                       </div>
+                        <div>
+                            <img src="https://img.naukimg.com/logo_images/v2/mobile/368415.gif" alt="">
+                        </div>
+                    </div>
+                    <p class="fontEleven fadedText" style="text-align: right;">Posted 2 days ago</p>
+                    <hr>
+                    <div class="inJobOuter">
+                        <div> <h4 class="fontFifteen rightTextMargin wordBold">Laravel Web Developer cum Designer (Experience)/ Web Designer Fresher</h4>
+                        <p class="fontThirteen rightTextMargin">Vishakan Placement Servic... <span class="wordBold">  2.8</span> <i class="applyStarYellow fa-solid fa-star"></i> <span class="colorText">(5  reviews)</span></p>
+                        
+                        <p class="fontThirteen"> <i  class="jdIcons fa-solid fa-location-dot"></i>Chennai</p>
+                       </div>
+                        <div>
+                        </div>
+                    </div>
+                    <p class="fontEleven fadedText" style="text-align: right;">Posted 3 days ago</p>
+                    <hr>
+                     <div class="inJobOuter">
+                        <div> <h4 class="fontFifteen rightTextMargin wordBold">React Native Mobile App Developer</h4>
+                        <p class="fontThirteen rightTextMargin">Excellence Technosoft Pri...  <span class="wordBold">  3.2</span> <i class="applyStarYellow fa-solid fa-star"></i> <span class="colorText">(20  reviews)</span></p>
+                        
+                        <p class="fontThirteen"> <i  class="jdIcons fa-solid fa-location-dot"></i>Noida, Delhi / NCR</p>
+                       </div>
+                        <div>
+                            <img src="https://img.naukimg.com/logo_images/v2/mobile/368415.gif" alt="">
+                        </div>
+                    </div>
+                    <p class="fontEleven fadedText" style="text-align: right;">Posted 2 days ago</p>
+                    <hr>
+                    <p style="text-align: right;" class="colorText wordBold fontFourteen ">View All</p>
+                </div>
+
+                <div id="jobDescriptionSection" class="applyAdBox">
                     <h5 class="wordBold">React Native Devloper - Javascript/Redux</h5>
                     <p class="fontThirteen">Medront</p>
                     <p class="fadedText"><i class=" jdIcons fa-solid fa-briefcase"></i>0 - 2 years</p>
                     <p class="fadedText"><i  class="jdIcons fa-solid fa-wallet"></i>Not disclosed</p>
                     <p class="fadedText"><i  class="jdIcons fa-solid fa-location-dot"></i>Mumbai, Hyderabad/Secunderabad, Chennai, Delhi / NCR,
-                        <button type="button" class="btn wordBold fontFourteen btn-primary">APPLY</button>
+                        <button type="button" id="applyJobBtn" class="btn wordBold fontFourteen btn-primary">APPLY</button>
                         <button type="button" class="btn wordBold fontFourteen btn-outline-primary">Save</button><br><span id="viewMore"> <span class="colorText">View More</span>  (WFH during Covid)</span></p>
                   
                         <hr>
@@ -151,7 +209,7 @@
                     <span class="colorText">Read More</span></p>
             </div>
             <div id="applyRightSection">
-                <div id="interestedJobs">
+                <div id="rightMoreJob" class="interestedJobs">
                     <h5 class="fontEighteen wordBold">Jobs you might be interested in</h5>
                     <br>
                     <div class="inJobOuter">
@@ -240,6 +298,28 @@ window.addEventListener("scroll",function(){
     }
  
 })
+// document.querySelector("#jobDescriptionSection").style.display="none";
+
+document.querySelector("#successJob").style.display="none";
+document.querySelector("#leftMoreJob").style.display="none";
+
+
+document.querySelector("#applyJobBtn").addEventListener("click",appliedfunc)
+function appliedfunc(){
+    document.querySelector("#btnJobApplied").innerText="APPLIED";
+    document.querySelector("#btnJobApplied").style.color="#28AD35";
+    document.querySelector("#btnJobApplied").style.backgroundColor="white";
+    document.querySelector("#btnJobApplied").style.border="none";
+    document.querySelector("#leftMoreJob").style.display="block";
+    document.querySelector("#rightMoreJob").style.display="none";
+
+
+
+    document.querySelector("#jobDescriptionSection").style.display="none";
+    document.querySelector("#successJob").style.display="flex";
+    document.querySelector(".applyBlue").style.backgroundColor="#F7F7F7";
+
+}
 
 </script>
 
