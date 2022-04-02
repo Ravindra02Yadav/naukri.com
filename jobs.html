@@ -72,7 +72,7 @@
            /* color: black; */
          /* font-size: larger; */
          /* background-color:bisque; */
-         box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+         /* box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; */
                            /* border-radius:5px; */
 
             }
@@ -832,16 +832,16 @@ posted : " 3 days ago"
      var skill=document.querySelector("#searchbox1").value;
      var  location=document.querySelector("#searchbox2").value;
 
-     if(skill=="Business Development Manager"){
+     if(skill=="Business Development Manager"|| skill=="business development manager" || skill=="Business development manager"){
     document.querySelector("#BDM").style.display="block";
   }
-  if(skill=="Full stack developer"){
+  if(skill=="Full stack developer"|| skill=="full stack developer" || skill=="Full Stack Developer"|| skill=="Full stack web developer") { 
     
     document.querySelector("#FSD").style.display="block";
     document.querySelector("#BDM").style.display="none"; 
     document.querySelector("#mumbai").style.display="none";
   }
-  if(skill=="Business Analyst"){
+  if(skill=="Business Analyst" ||  skill=="buisness analyst" || skill=="Business analyst"){
     
     document.querySelector("#FSD").style.display="none";
     document.querySelector("#BDM").style.display="none"; 
