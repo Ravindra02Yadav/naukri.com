@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> master
 var fixHead=document.querySelector("#asd")
 fixHead.style.display="none";
 window.addEventListener("scroll",function(){
