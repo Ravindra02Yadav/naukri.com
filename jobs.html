@@ -20,9 +20,7 @@
         border-radius: 20px;
       
       }
-        .dropdown:hover.dropdown-menu{ 
-            display: block;
-        }
+        
         body{
             font-family : 'Work Sans', sans-serif;
             background-color:hwb(0 91% 0%)
@@ -221,62 +219,183 @@ color: #00759E;
 #applyFooter>div>p:hover{
   color: #3485ad;
 }
+
+#navItem{
+    display: flex;
+    margin: auto;
+    padding: 10px;
+    margin-top: -15px;
+    font-family: 'Inter', sans-serif;
+font-size: 18px;
+color: #8695b6;
+}
+#navItem>div{
+    
+    padding: 10px;
+    margin-left: 10px;
+}
+#navButton{
+    display: flex;
+    margin: auto;
+    padding: 10px;
+    
+
+}
+
+.btn-light{
+    background-color: white;
+    border: 1px solid #4780ff;
+    color: #4780ff;
+    font-family: 'Inter', sans-serif;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    border-radius: 20px;
+    margin-top: -15px;
+    
+}
+.btn-orange{
+    border: none;
+    color: white;
+    background-color: #ff7555;
+    font-family: 'Inter', sans-serif;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    border-radius: 20px;
+    margin-top: -15px;
+}
+.dropbtn {
+    background-color: white;
+    color:darkgrey;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    width: 300px;
+    line-height: 10px;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 0;
+    border-radius:10px;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  #navBar{
+    display: flex;
+    margin: auto;
+padding: 10px;
+/* border:1px solid black; */
+
+}
+span{
+    color: #8695b6;
+}
+  #logo>img{
+    width: 100%;
+    height: 50%;
+    border-radius: 1px;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+
+
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light navv">
-        <div class="container-fluid">
-      
-               <div class="container">
-            <a class="navbar-brand" href="#">
-              <img src="https://static.naukimg.com/s/4/100/i/naukri_Logo.png" alt="" width="200" height="34">
-            </a>
-          </div>
-         
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Jobs
-                    </a></li>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="jobs.html">Search Jobs </a></li>
-                      <li><a class="dropdown-item" href="#">Jobs By location </a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Jobs By skills</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Recruiters
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Recruiters Login</a></li>
-                      <l><a class="dropdown-item" href="#">Create Recruiters ID</a></l>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Data Base access</a></li>
-                    </ul>
-                  </li>
+    <div id="navBar">
+      <div id="logo">
+<img src="https://static.naukimg.com/s/4/100/i/naukri_Logo.png" alt="">
+      </div>
+      <div id="navItem">
 
-                  <li class="nav-item dropdown">
-                    <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                   companies
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                </ul>
-           
-        </div>
-        </div>
-      </nav>
+
+
+          
+<div class="dropdown">
+  <button class="dropbtn">JOBS</button>
+  <div class="dropdown-content">
+    <a href="jobs.html">Search Jobs</a>
+    <a href="#">Create Free job alert</a>
+    <a href="#">Jobs By location </a>
+    <a href="#">Jobs By skill </a>
+    <a href="#">Jobs By Designation  </a>
+    <a href="#">Jobs By Company </a>
+    <a href="#">Browse all Jobs</a>
+  </div>
+</div>  
+ <div class="dropdown">
+  <button class="dropbtn">RECRUITERS</button>
+  <div class="dropdown-content">
+    <a href="#">Browse all recruiters</a>
+    <a href="#">recruiter  connections </a>
+    <a href="#">Go to Naukrirecruiters</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">COMPANIES</button>
+  <div class="dropdown-content">
+    <a href="#">Browse all companies</a>
+    <a href="#">About companies</a>
+    <a href="#">Interview Questions</a>
+    <a href="#">Write company Review</a>
+    <a href="#">Company Review</a> 
+    
+    
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">SERVICES</button>
+  <div class="dropdown-content">
+    <a href="#"> Resume writing</a>
+    <a href="#">Jobs For you</a>
+    <a href="#">Recruiters reach</a>
+    <a href="#">Courses</a> 
+    <a href="#">Other</a> 
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">TOOLS</button>
+  <div class="dropdown-content">
+    <a href="#">Career Dashboard</a>
+    <a href="#">Your next carrer move</a>
+    <a href="#">Skill Trends</a>
+    <a href="#">Naukri Lab</a> 
+  </div>
+</div>
+
+
+
+
+
+
+      </div>
+      <i class="fa-solid fa-bell"></i> &nbsp &nbsp &nbsp &nbsp
+      <a href="#" >My Naukri </a>
+
+      </div>
+  </div>
       <form>
 <div id="search">
 <input type="text" placeholder="Skills, Designation,companies" id="searchbox1">
