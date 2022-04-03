@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <title>Jobs | Naukri</title>
+    <link rel="icon" href="https://static.naukimg.com/s/7/103/i/naukriIcon.74e6a29a.png" type="">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -19,9 +20,7 @@
         border-radius: 20px;
       
       }
-        .dropdown:hover.dropdown-menu{ 
-            display: block;
-        }
+        
         body{
             font-family : 'Work Sans', sans-serif;
             background-color:hwb(0 91% 0%)
@@ -181,62 +180,219 @@ line-height: -4px ;
       width:100%;
       height:50%;
     }
+    #applyFooter{
+  background-color: #2E3339;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+#applyFooter>div>img{
+  height: 70px;
+  margin-top: 0;
+}
+.socialLogo{
+  font-size: 150%;
+}
+.fb{
+  color: #3B5998;
+}
+.twitter{
+color: #38A0CD;
+}
+.linkedin{
+color: #00759E;
+}
+.copyrightPart{
+  background-color: #E2E2E2;
+   text-align: center;
+   padding: 10px;
+  
+}
+#applyFooter>div>p{
+  margin: 4px;
+  color: #9d9fa0;
+}
+#applyFooter>div>p:hover{
+  color: #3485ad;
+}
+#navItem{
+    display: flex;
+    margin: auto;
+    padding: 10px;
+    margin-top: -15px;
+    font-family: 'Inter', sans-serif;
+font-size: 18px;
+color: #8695b6;
+}
+#navItem>div{
+    
+    padding: 10px;
+    margin-left: 10px;
+}
+#navButton{
+    display: flex;
+    margin: auto;
+    padding: 10px;
+    
+
+}
+
+.btn-light{
+    background-color: white;
+    border: 1px solid #4780ff;
+    color: #4780ff;
+    font-family: 'Inter', sans-serif;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    border-radius: 20px;
+    margin-top: -15px;
+    
+}
+.btn-orange{
+    border: none;
+    color: white;
+    background-color: #ff7555;
+    font-family: 'Inter', sans-serif;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    border-radius: 20px;
+    margin-top: -15px;
+}
+.dropbtn {
+    background-color: white;
+    color:darkgrey;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    width: 300px;
+    line-height: 10px;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 0;
+    border-radius:10px;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  #navBar{
+    display: flex;
+    margin: auto;
+padding: 10px;
+/* border:1px solid black; */
+
+}
+span{
+    color: #8695b6;
+}
+  #logo>img{
+    width: 100%;
+    height: 50%;
+    border-radius: 1px;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light navv">
-        <div class="container-fluid">
-      
-               <div class="container">
-            <a class="navbar-brand" href="#">
-              <img src="https://static.naukimg.com/s/4/100/i/naukri_Logo.png" alt="" width="200" height="34">
-            </a>
-          </div>
-         
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Jobs
-                    </a></li>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="jobs.html">Search Jobs </a></li>
-                      <li><a class="dropdown-item" href="#">Jobs By location </a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Jobs By skills</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Recruiters
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Recruiters Login</a></li>
-                      <l><a class="dropdown-item" href="#">Create Recruiters ID</a></l>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Data Base access</a></li>
-                    </ul>
-                  </li>
+    <div id="navBar">
+      <div id="logo">
+<img src="https://static.naukimg.com/s/4/100/i/naukri_Logo.png" alt="">
+      </div>
+      <div id="navItem">
 
-                  <li class="nav-item dropdown">
-                    <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                   companies
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                </ul>
-           
-        </div>
-        </div>
-      </nav>
+
+
+          
+<div class="dropdown">
+  <button class="dropbtn">JOBS</button>
+  <div class="dropdown-content">
+    <a href="jobs.html">Search Jobs</a>
+    <a href="#">Create Free job alert</a>
+    <a href="#">Jobs By location </a>
+    <a href="#">Jobs By skill </a>
+    <a href="#">Jobs By Designation  </a>
+    <a href="#">Jobs By Company </a>
+    <a href="#">Browse all Jobs</a>
+  </div>
+</div>  
+ <div class="dropdown">
+  <button class="dropbtn">RECRUITERS</button>
+  <div class="dropdown-content">
+    <a href="#">Browse all recruiters</a>
+    <a href="#">recruiter  connections </a>
+    <a href="#">Go to Naukrirecruiters</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">COMPANIES</button>
+  <div class="dropdown-content">
+    <a href="#">Browse all companies</a>
+    <a href="#">About companies</a>
+    <a href="#">Interview Questions</a>
+    <a href="#">Write company Review</a>
+    <a href="#">Company Review</a> 
+    
+    
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">SERVICES</button>
+  <div class="dropdown-content">
+    <a href="#"> Resume writing</a>
+    <a href="#">Jobs For you</a>
+    <a href="#">Recruiters reach</a>
+    <a href="#">Courses</a> 
+    <a href="#">Other</a> 
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">TOOLS</button>
+  <div class="dropdown-content">
+    <a href="#">Career Dashboard</a>
+    <a href="#">Your next carrer move</a>
+    <a href="#">Skill Trends</a>
+    <a href="#">Naukri Lab</a> 
+  </div>
+</div>
+
+
+
+
+
+
+      </div>
+      <i class="fa-solid fa-bell"></i> &nbsp &nbsp &nbsp &nbsp
+      <a href="#" >My Naukri </a>
+
+      </div>
+  </div>
       <form>
 <div id="search">
 <input type="text" placeholder="Skills, Designation,companies" id="searchbox1">
@@ -584,187 +740,7 @@ line-height: -4px ;
 
 
       
-<!-- Footer -->
-<footer class="bg-dark text-center text-white">
-    <!-- Grid container -->
-    <div class="container p-4">
-      <!-- Section: Social media -->
-      <section class="mb-4">
-        <!-- Facebook -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-facebook-f"></i
-        ></a>
-  
-        <!-- Twitter -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-twitter"></i
-        ></a>
-  
-        <!-- Google -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-google"></i
-        ></a>
-  
-        <!-- Instagram -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-instagram"></i
-        ></a>
-  
-        <!-- Linkedin -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-linkedin-in"></i
-        ></a>
-  
-        <!-- Github -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-github"></i
-        ></a>
-      </section>
-      <!-- Section: Social media -->
-  
-      <!-- Section: Form -->
-      <section class="">
-        <form action="">
-          <!--Grid row-->
-          <div class="row d-flex justify-content-center">
-            <!--Grid column-->
-            <div class="col-auto">
-              <p class="pt-2">
-                <strong>Sign up for our newsletter</strong>
-              </p>
-            </div>
-            <!--Grid column-->
-  
-            <!--Grid column-->
-            <div class="col-md-5 col-12">
-              <!-- Email input -->
-              <div class="form-outline form-white mb-4">
-                <input type="email" id="form5Example21" class="form-control" />
-                <label class="form-label" for="form5Example21">Email address</label>
-              </div>
-            </div>
-            <!--Grid column-->
-  
-            <!--Grid column-->
-            <div class="col-auto">
-              <!-- Submit button -->
-              <button type="submit" class="btn btn-outline-light mb-4">
-                Subscribe
-              </button>
-            </div>
-            <!--Grid column-->
-          </div>
-          <!--Grid row-->
-        </form>
-      </section>
-      <!-- Section: Form -->
-  
-      <!-- Section: Text -->
-      
-      <!-- Section: Text -->
-  
-      <!-- Section: Links -->
-      <section class="">
-        <!--Grid row-->
-        <div class="row">
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Jobseekers</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-white">Upload Resume</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Search Jobs</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Resume Program</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Report a problem</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-  
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-3 mb-2 mb-md-0">
-            <h5 class="text-uppercase">Employers</h5>
-  
-            <ul class="list-unstyled mb-1">
-              <li>
-                <a href="#!" class="text-white">Job P0sting</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Resume Database access</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Naukri RMS</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Recruiters login</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-  
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Information</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-white">About Us</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Career</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Insigths</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Mission </a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-  
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Naukri Learning</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-white">Software Development</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Artificial Intelligence</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Automation</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Creative Design</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-        </div>
-        <!--Grid row-->
-      </section>
-      <!-- Section: Links -->
-    </div>
-    <!-- Grid container -->
-  
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2022 Copyright:
-      <a class="text-white" href="https://Masaischool.com/">Masaischool.com</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -879,5 +855,96 @@ posted : " 3 days ago"
 
   
     </script>
+     <div id="applyFooter">
+               
+      <div>
+          <h6>Information</h6>
+          <p>About Us</p>
+          <p>Terms & Conditions</p>
+          <p>Privacy Policy</p>
+          <p>Careers with Us</p>
+          <p>Sitemap</p>
+          <p>Contact Us</p>
+          <p>FAQs</p>
+          <p>Summons / Notices</p>
+          <p>Grievances</p>
+          <p>Fraud Alert</p>
+          <p>Trust and Safety</p> <br>
+          <h6>Naukri on Mobile</h6>
+          <img src="https://iconape.com/wp-content/files/dw/351333/svg/351333.svg" alt="">
+      </div>
+      <div>
+          <h6>Jobseekers</h6>
+          <p>Register Now</p>
+          <p>Search Jobs</p>
+          <p>Login</p>
+          <p>Create Job Alert</p>
+          <p>Report a Problem</p>
+          <p>Naukri Blogs</p>
+          <p>Mobile Site</p> <br>
+          <h6>Browse Jobs</h6>
+          <p>Browse All Jobs</p>
+          <p>Premium MBA Jobs</p>
+          <p>Premium Engineering <br> Jobs</p>
+          <p>Govt. Jobs</p>
+          <p>International Jobs</p>
+          <p>Jobs in Gulf</p>
+          <p>Jobs by Company</p>
+          <p>Jobs by Category</p>
+          <p>Jobs by Designation</p>
+          <p>Jobs by Location</p>
+          <p>Jobs by Skill</p>
+      </div>
+      <div>
+          <h6>Jobseeker Services</h6>
+          <p>Priority Applicant                        </p>
+          <p>Resume Display</p>
+          <p>Resume Writing</p>
+          <p>Jobs4U</p>
+          <p>Recruiter Connection</p>
+          <p>Job Search Booster</p> <br>
+          <h6>Naukri Learning</h6>
+          <p>Software and Technology</p>
+          <p>Artificial Intelligence and <br> Data Science</p>
+          <p>Management</p>
+          <p>Finance</p>
+          <p>Creativity and Design</p>
+          <p>Emerging Technologies</p>
+          <p>Engineering-non CS</p>
+          <p>Healthcare</p>
+          <p>Energy and Environment</p>
+          <p>Social sciences</p>
+          <p>Personal growth</p>
+      </div>
+      <div>
+          <h6>Employers</h6>
+          <p>Job Posting</p>
+          <p>Resume Database Access</p>
+          <p>Recruiter Login</p>
+          <p>Naukri RMS</p>
+          <p>Buy Resume Packages Online</p>
+          <p>Transition Services</p>
+          <p>Report a Problem</p>
+          <p>Recruiters from USA, call</p>
+          <p>Toll Free # 1866-557-3340</p> <br>
+          <h6>Ambition Box</h6>
+          <p>Interview Questions</p>
+          <p>About Companies</p>
+          <p>Share Interview Advice</p>
+          <p>Write Company Review</p>
+          <p>Company Reviews</p>
+          <p>Company Salaries</p>
+          <br>
+          <p>Follow Us</p>
+          <a href="https://www.facebook.com/login/"><i class="fb socialLogo fa-brands fa-facebook-square"></i></a>
+          <a href="https://twitter.com/login/"><i class="twitter socialLogo fa-brands fa-twitter-square"></i></a>
+            <a href="https://www.linkedin.com/login/"><i class="linkedin socialLogo fa-brands fa-linkedin"></i></a> 
+        
+      </div>
+  
+</div>
+<p class="copyrightPart">
+  All rights reserved @ 2022 Info Edge (India) Ltd.</p>
+
   </body>
 </html>
