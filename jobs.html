@@ -282,7 +282,7 @@ color: #8695b6;
   
   .dropdown-content {
     width: 300px;
-    line-height: 10px;
+    line-height: 0px;
     display: none;
     position: absolute;
     background-color: #f1f1f1;
@@ -290,10 +290,11 @@ color: #8695b6;
     /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     z-index: 0;
     border-radius:10px;
+    font-size: 12px;
   }
   
   .dropdown-content a {
-    color: black;
+    color: gray;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -308,18 +309,35 @@ padding: 10px;
 span{
     color: #8695b6;
 }
+.dropbtn{
+    font-size: 13px;
+    font-weight: bold;
+}
+.dropbtn:hover{
+background-color: #F5F5F5;
+color: #0D6EFD;
+text-decoration: underline 3px #0D6EFD;
+
+}
   #logo>img{
     width: 100%;
     height: 50%;
     border-radius: 1px;
+    margin-top: 20px;margin-left: 30px;
   }
   
-  .dropdown-content a:hover {background-color: #ddd;}
+  .dropdown-content a:hover {   color: #0D6EFD;}
   
   .dropdown:hover .dropdown-content {display: block;}
   
   /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
-
+  #notification>a{
+   
+   text-decoration: none;
+}
+#notification{
+   margin-top: 17px;
+}
 
     </style>
   </head>
@@ -386,13 +404,15 @@ span{
 </div>
 
 
-
+<div id="notification">
+  <i class="fa-solid fa-bell"></i> &nbsp &nbsp &nbsp
+  <a href="#" >My Naukri </a>
+</div>
 
 
 
       </div>
-      <i class="fa-solid fa-bell"></i> &nbsp &nbsp &nbsp &nbsp
-      <a href="#" >My Naukri </a>
+      
 
       </div>
   </div>
@@ -417,23 +437,23 @@ span{
 <div id="location">
     <div>
        <img src="https://www.seekpng.com/png/detail/90-905415_gateway-of-india-full-hd-maps-locations-mumbai.png" >
-       <p><a href="http://clipartmax.com"> Jobs in Mumbai</a> </p>
+       <p><a href="jobs.html"> Jobs in Mumbai</a> </p>
     </div>
     <div>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiSqwe0Oi-aMz_Q_UcND1HvEw41FlaNBCCPpJ6x8EJecWgkj2j7cyc3Oe8ZzRLRRjEebA&usqp=CAU" >
-        <p><a href="http://clipartmax.com"> Jobs in Delhi</a></p>
+        <p><a href="jobs.html"> Jobs in Delhi</a></p>
      </div>
      <div>
         <img src="data:image/png;base64,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" >
-        <p><a href="http://clipartmax.com"> Jobs in Hyderabad</a></p>
+        <p><a href="jobs.html"> Jobs in Hyderabad</a></p>
      </div>
      <div>
         <img src="https://as2.ftcdn.net/v2/jpg/02/81/01/81/500_F_281018146_qAWE7Na1jKGZFrHa1wGAruhGDMmDP4R5.jpg">
-        <p><a href="#" > Jobs in Bangalore</a></p>
+        <p><a href="jobs.html" > Jobs in Bangalore</a></p>
      </div>
      <div>
         <img src="https://thumbs.dreamstime.com/t/outline-pune-india-city-skyline-colored-buildings-isolated-white-vector-illustration-maharashtra-cityscape-landmarks-241078003.jpg">
-        <p><a href="http://clipartmax.com"> Jobs in Pune</a></p>
+        <p><a href="jobs.html"> Jobs in Pune</a></p>
      </div>
 
 </div>

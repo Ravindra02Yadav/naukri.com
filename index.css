@@ -24,13 +24,17 @@ span{
     display: flex;
  margin: auto;
 padding: 10px;
-padding-top: 40px;
+padding-top: 20px;
 margin-top: -70px;
 margin-left: 60px;
 width: 90%;
 position: fixed;
-background-color: white;
+background-color: white;   
+ /* border: 1px solid green; */
+
+
 }
+
 
 #navItem{
     display: flex;
@@ -39,6 +43,8 @@ background-color: white;
     margin-top: -20px;  
 font-size: 18px;
 color: #8695b6;
+/* border: 1px solid blue; */
+
 } 
 
 #navItem>div{
@@ -64,7 +70,8 @@ color: #8695b6;
     padding-right: 20px;
     margin-left: 20px;
     border-radius: 20px;
-    margin-top: -15px;
+    margin-top: -12px;
+    
     
 }
 .btn-orange{
@@ -77,39 +84,54 @@ color: #8695b6;
     padding-right: 20px;
     margin-left: 20px;
     border-radius: 20px;
-    margin-top: -15px;
+    margin-top: -30px;
 }
 .dropbtn {
     background-color: white;
     color:darkgrey;
     padding: 16px;
-    font-size: 16px;
+    font-size: 15px;
     border: none;
+    font-weight: bold;
+  }
+  #logo>img{
+   
+    border-radius: 1px;
+    margin-top: 20px;margin-left: 30px;
   }
   
   .dropdown {
     position: relative;
     display: inline-block;
+    /* border: 1px solid red; */
   }
   
   .dropdown-content {
+    width: 300px;
+    line-height: 5px;
     display: none;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
     /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     z-index: 0;
-    /* border-radius:10px; */
+    border-radius:10px;
   }
+  .dropbtn:hover{
+    background-color: #F5F5F5;
+    color: black;
+    text-decoration: underline 3px #FF7555;
+    }
   
   .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    
   }
   
-  .dropdown-content a:hover {background-color: #ddd;}
+  .dropdown-content a:hover {     color: #0D6EFD;}
   
   .dropdown:hover .dropdown-content {display: block;}
   

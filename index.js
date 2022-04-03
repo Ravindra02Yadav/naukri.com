@@ -93,3 +93,22 @@ featureData.map(function (elem){
 box.append(img,comDetails,info,btn);
 document.querySelector("#feature").append(box)
 })
+
+function mylogin(){
+    //console.log("hi")
+
+    var EnteredEmail=document.querySelector("#exampleInputEmail1").value;
+    var EnteredPassward=document.querySelector("#exampleInputPassword1").value;
+   //console.log(EnteredEmail)
+  
+
+  if(EnteredPassward=="1234" && EnteredEmail=="gauravjx12@gmail.com")
+  {
+     alert("You have signed-in successfully!")
+     window.location.href="jobs.html"
+  }
+  else{
+    alert("Sign-in unsuccessful!")
+  }
+  event.preventDefault();
+  }
