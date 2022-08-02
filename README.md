@@ -1,4 +1,4 @@
-# unit-2-project
+# unit-2-project naukri.com
 
 This project is the clone of naurkri.com, collaboratively completed by 4 team members mentioned below. Here, you can apply for your dream job and do  all the functionality of the site.
 
